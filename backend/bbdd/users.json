@@ -1,0 +1,23 @@
+{
+  "_id": "",
+  "name": "Nombre",
+  "Lastname": "last Name",
+  "email": "email@example.com",
+  "username": "username",
+  "password": "hashed_password",
+  "address": {
+    "street": "Calle Falsa 123",
+    "city": "Ciudad",
+    "Country": "País"
+  },
+  "compras_realizadas": [
+    {
+      "product_id": "",
+      "date": "2023-01-15",
+      "cantidad": 2,
+      "total_price": 39.98,
+      "status": "Entregado"
+    }
+  ],
+  "dni": "12345678A"
+}

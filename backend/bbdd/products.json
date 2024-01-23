@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Camiseta Work, sweet work",
+    "category": "camisetas",
+    "price": 19.99,
+    "sizes": [
+      {
+        "size": "S",
+        "stock": 15
+      },
+      {
+        "size": "M",
+        "stock": 20
+      },
+      {
+        "size": "L",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "stock": 5
+      }
+    ],
+    "colors": "Blanco",
+    "description": "Camiseta de algodón blanca con cuello redondo y manga corta.",
+    "images": ["", "", ""]
+  },
+  {
+    "name": "Chapa workoholics",
+    "category": "chapas",
+    "price": 5,
+    "variants": [
+      {
+        "design": "Blanco",
+        "stock": 100
+      },
+      {
+        "design": "Negro",
+        "stock": 150
+      },
+      {
+        "design": "Rosa",
+        "stock": 75
+      }
+    ],
+    "description": "Chapa con logo workoholics",
+    "images": ["", "", ""]
+  },
+  {
+    "name": "Chapa Punto de cruz",
+    "category": "chapas",
+    "price": 5,
+    "variants": [
+      {
+        "design": "Punto de cruz",
+        "stock": 100
+      }
+    ],
+    "description": "Chapa con logo workoholics",
+    "images": ["", "", ""]
+  },
+  {
+    "name": "tote Work, sweet work",
+    "category": "totebag",
+    "price": 10,
+    "variants": [
+      {
+        "design": "Work, sweet work",
+        "stock": 100
+      }
+    ],
+    "description": "Totebag color rosa con diseño Work, sweet work",
+    "images": ["", "", ""]
+  },
+  {
+    "name": "Poster W",
+    "category": "posters",
+    "price": 10,
+    "variants": [
+      {
+        "design": "W",
+        "stock": 100
+      }
+    ],
+    "description": "Poster Con diseño W color rosa",
+    "images": ["", "", ""]
+  },
+  {
+    "name": "Poster Holistic Web",
+    "category": "posters",
+    "price": 10,
+    "variants": [
+      {
+        "design": "Holistic Web",
+        "stock": 100
+      }
+    ],
+    "description": "Poster Con diseño Holistic Web",
+    "images": ["", "", ""]
+  }
+]
