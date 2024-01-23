@@ -1,0 +1,202 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixings";
+
+.user-container {
+  h2{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: $h2-size-desktop;
+    font-weight: $hs-weight;
+  }
+  .user-filter-container{
+    h3{
+      font-size: $h3-size-desktop;
+      font-weight: $hs-weight;
+      margin-left: 1rem;
+    }
+    .user-filter{
+      margin-top: 1rem;
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      
+      button{
+        background-color: white;
+        border: white;
+        font-size: $links-size-desktop;
+        font-weight: $ps-weight;
+        display: inline-block;
+        cursor: pointer;
+        }
+        button::after{
+          content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background: $main-color;
+            transition: width .3s;
+        }
+        button:hover::after{
+          width: 100%;
+        }
+
+    }
+  }
+
+  .order-container{
+    margin: auto;
+    width: 100%;
+    display: grid;
+    padding: 0.7rem;
+    padding-top: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    .order-card{
+      width: 100%;
+      display: flex;
+      .img-container{
+        width: 100%;
+        margin-right: 1rem;
+        img{
+        max-width: 100%;
+        }
+      }
+      .info-container{
+        width: 100%;
+        .order-number{
+          font-size: $p-size-big-desktop;
+          display: inline-block;
+          margin-right: 2rem;
+          font-weight: $ps-weight;
+          margin-bottom: 0.5rem;
+        }
+        .order-price{
+          font-size: $p-size-big-desktop;
+          display: inline-block;
+          font-weight: $ps-weight;
+        }
+        .order-date{
+          font-size: $p-size-desktop;
+          font-weight: $ps-weight;
+        }
+        .order-payment{
+          font-size: $p-size-desktop;
+          font-weight: $ps-weight;
+          margin-bottom: 1rem;
+        }
+
+        .pending{
+          @include pending-style-desktop
+        }
+        .completed{
+          @include completed-style-desktop
+        }
+        .canceled{
+          @include canceled-style-desktop
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+.user-container {
+  h2{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: $h2-size-mobile;
+    font-weight: $hs-weight;
+  }
+  .user-filter-container{
+    h3{
+      font-size: $h3-size-mobile;
+      font-weight: $hs-weight;
+      margin-left: 1rem;
+    }
+    .user-filter{
+      margin-top: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      
+      button{
+        background-color: white;
+        border: white;
+        font-size: $links-size-mobile;
+        font-weight: $ps-weight;
+        display: inline-block;
+        cursor: pointer;
+        }
+        button::after{
+          content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background: $main-color;
+            transition: width .3s;
+        }
+        button:hover::after{
+          width: 100%;
+        }
+
+    }
+  }
+
+  .order-container{
+    margin: auto;
+    width: 100%;
+    display: grid;
+    padding: 0.7rem;
+    padding-top: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    .order-card{
+      width: 100%;
+      display: flex;
+      .img-container{
+        width: 100%;
+        margin-right: 1rem;
+        img{
+        max-width: 100%;
+        }
+      }
+      .info-container{
+        width: 100%;
+        .order-number{
+          font-size: $p-size-big-mobile;
+          display: inline-block;
+          margin-right: 2rem;
+          font-weight: $ps-weight;
+          margin-bottom: 0.5rem;
+        }
+        .order-price{
+          font-size: $p-size-big-mobile;
+          display: inline-block;
+          font-weight: $ps-weight;
+        }
+        .order-date{
+          font-size: $p-size-mobile;
+          font-weight: $ps-weight;
+        }
+        .order-payment{
+          font-size: $p-size-mobile;
+          font-weight: $ps-weight;
+          margin-bottom: 1rem;
+        }
+
+        .pending{
+          @include pending-style-mobile
+        }
+        .completed{
+          @include completed-style-mobile
+        }
+        .canceled{
+          @include canceled-style-mobile
+        }
+
+      }
+    }
+  }
+}
+}

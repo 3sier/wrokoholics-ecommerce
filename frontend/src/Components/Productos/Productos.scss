@@ -1,0 +1,210 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixings";
+
+.separator{
+   display: block;
+   height: 50px;
+   width: 10%;
+}
+.main-products{
+   margin-bottom: 3rem;
+   cursor: pointer;
+   
+   .products-title{
+      margin-bottom: 2rem;
+      display: flex;
+      h2{
+         font-size: $h2-size-desktop;
+         margin-left: 0.6rem;
+         margin-top: 1rem;
+      }
+      .line{
+         margin-left: 5rem;
+         height: 70px;
+         width: 4%;
+         border-bottom: 0.5px solid $main-color;
+      }
+
+   }
+   
+   .product-container{
+      
+      margin: auto;
+      width: 70%;
+      display: grid;
+      padding: 0.7rem;
+      padding-top: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6rem;
+      .product-card{
+         box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+         background-color: white;
+         border-radius: $box-radious-mobile-xl;
+         height: auto;
+
+         .img-container{
+            width: 100%;
+            img{
+            max-width: 100%;
+         }
+         }
+
+         h3{
+            font-size: $h3-size-mobile;
+            font-weight: $hs-weight;
+            height: 60px;
+            max-width: 90%;
+            margin-left: 2rem;
+            margin-top: 1rem;
+         }
+         p{
+            font-size: $p-size-big-mobile;
+            font-weight: $ps-weight;
+            margin-left: 2rem;
+            height: 60px;
+         }
+         .product-options{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 68px;
+               select{
+                  @include input-style-desktop
+               }
+               input{
+                  @include input-style-desktop
+               }
+               button{
+                  @include btn-cart-sm-desktop
+               }
+         }
+
+
+        
+      }
+    }
+
+    
+}
+
+.modal-cart{
+   color: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 90%;
+     height: 150px;
+
+     .check-icon{
+        color: $okey-color;
+      }
+  }
+
+
+@media (max-width: 768px) {
+   .separator{
+      display: block;
+      height: 80px;
+      width: 10%;
+   }
+   .main-products{
+      .products-title{
+         margin-bottom: 2rem;
+         display: flex;
+         h2{
+            font-size: $h2-size-mobile;
+            margin-left: 0.6rem;
+            margin-top: 1rem;
+         }
+         .line{
+            margin-left: 1rem;
+            height: 42px;
+            width: 6%;
+            border-bottom: 0.5px solid $main-color;
+         }
+   
+      }
+      
+      .product-container{
+         
+         margin: auto;
+         width: 80%;
+         display: grid;
+         padding: 0.7rem;
+         padding-top: 1rem;
+         grid-template-columns: repeat(1, 1fr);
+         gap: 2rem;
+         .product-card{
+            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+            background-color: white;
+            border-radius: $box-radious-mobile-xl;
+            height: auto;
+
+            .img-container{
+               width: 100%;
+               img{
+               max-width: 100%;
+            }
+            }
+
+            h3{
+               font-size: $h3-size-mobile;
+               font-weight: $hs-weight;
+               max-width: 90%;
+               margin-left: 0.5rem;
+               margin-top: 0.5rem;
+            }
+            p{
+               font-size: $p-size-big-mobile;
+               font-weight: $ps-weight;
+               margin-left: 0.5rem;
+              
+            }
+            .product-options{
+               margin-left: 0.5rem;
+               display: flex;
+               align-items: center;
+               height: 67px;
+                  select{
+                     @include input-style-mobile
+                  }
+                  input{
+                     @include input-style-mobile
+                  }
+                  button{
+                     @include btn-cart-sm-mobile
+                  }
+            }
+
+
+           
+         }
+       }
+   }
+
+   .modal-cart{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 150px;
+
+      .check-icon{
+         color: $okey-color;
+       }
+   }
+   
+
+}
+

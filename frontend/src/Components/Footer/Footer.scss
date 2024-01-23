@@ -1,0 +1,134 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixings.scss";
+
+.cart-container{
+    flex: 1;
+}
+footer{
+    height: 60px;
+    width: 100%;
+    background-color: $menu-color;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    .redes{
+        margin-left: 0.5rem;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: $links-size-mobile;
+            font-weight: $ps-weight;
+            display: inline-block;
+            .arrow-ico{
+                transition: transform 0.3s ease-in-out;
+              }
+
+              .arrow-ico:hover{
+                transform: translateY(-5px);
+              }
+          }
+          a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: $main-color;
+            transition: width 0.3s;
+          }
+          a:hover::after {
+            width: 100%;
+          }
+
+         
+    }
+
+    .contact{
+        margin-top: 0rem;
+        margin-right: 1rem;
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: $links-size-mobile;
+            font-weight: $ps-weight;
+    }
+   
+}
+
+
+}
+
+@media (max-width: 768px) {
+    footer {
+        position: static;
+        height: auto;
+    width: 100%;
+    background-color: $menu-color;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .redes{
+      margin-top: 2rem;
+        margin-left: 0.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 170px;
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: $links-size-mobile;
+            font-weight: $ps-weight;
+            display: inline-block;
+            .arrow-ico{
+                transition: transform 0.3s ease-in-out;
+              }
+
+              .arrow-ico:hover{
+                transform: translateY(-5px);
+              }
+          }
+          a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: $main-color;
+            transition: width 0.3s;
+          }
+          a:hover::after {
+            width: 100%;
+          }
+
+         
+    }
+
+    .contact{
+        margin-top: 1rem;
+        margin-right: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        height: 70px;
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: $links-size-mobile;
+            font-weight: $ps-weight;
+    }
+   
+}
+    }
+}

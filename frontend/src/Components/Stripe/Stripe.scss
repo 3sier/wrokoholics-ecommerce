@@ -1,0 +1,275 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixings.scss";
+
+.separator {
+    height: 60px;
+  }
+  
+  .loader {
+    margin-left: 43%;
+    margin-top: 15%;
+    width: 170px;
+    padding: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: $main-color;
+    --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    animation: l3 2s infinite linear;
+  
+    @keyframes l3 {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+  }
+  
+  .checkout-container {
+    height: 500px;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+  
+    .card-box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+  
+      .card-icon {
+        width: 26%;
+        height: 250px;
+        background: linear-gradient(90deg, rgba(251, 8, 140, 1) 30%, rgba(251, 130, 196, 1) 100%);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .card-number{
+          color: white;
+          font-size: $h3-size-mobile;
+        }
+        .card-name{
+          margin-top: 1rem;
+          color: white;
+          font-size: $h3-size-mobile;
+        }
+        .card-details{
+          margin-top: 1rem;
+          width: 30%;
+          display: flex;
+          justify-content: space-between;
+          .card-date{
+            color: white;
+          font-size: $h3-size-mobile;
+          }
+          .card-cvc{
+            color: white;
+          font-size: $h3-size-mobile;
+          }
+        }
+      }
+    }
+  
+    .total-price {
+      height: 45px;
+      width: 30%;
+      border: 1px solid $main-color;
+      background-color: white;
+      border-radius: 0.4rem;
+      margin-bottom: 2rem;
+      text-align: center;
+  
+      h3 {
+        margin-top: 0.3rem;
+        font-size: $h3-size-mobile;
+      }
+    }
+  
+    .checkout-box {
+      width: 30%;
+      margin: auto;
+  
+      form {
+        width: 100%;
+        height: 370px;
+        display: grid;
+        grid-template-columns: repeat(6, 2fr);
+        grid-template-rows: repeat(10, 1fr);
+        gap: 0.5rem;
+  
+        .label-big {
+          margin-top: 1rem;
+          grid-column: span 6;
+          font-size: $p-size-big-mobile;
+        }
+  
+        .big {
+          @include form-style-mobile;
+          grid-column: span 6;
+        }
+  
+        .label-small {
+          margin-top: 1rem;
+          grid-column: span 2;
+          font-size: $p-size-big-mobile;
+        }
+  
+        .small {
+          @include form-style-mobile;
+          grid-column: span 2;
+        }
+  
+        button {
+          margin-top: 1rem;
+          @include btn-cart-mobile;
+          grid-column: span 6;
+        }
+      }
+    }
+  
+    &.hidden {
+      display: none;
+    }
+  }
+
+
+
+@media (max-width: 768px) {
+    
+    .loader {
+        margin-left: 37%;
+        margin-top: 37%;
+        width: 100px;
+        padding: 9px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: $main-color;
+        --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+        -webkit-mask: var(--_m);
+        mask: var(--_m);
+        -webkit-mask-composite: source-out;
+        mask-composite: subtract;
+        animation: l3 2s infinite linear;
+      
+        @keyframes l3 {
+          to {
+            transform: rotate(1turn);
+          }
+        }
+      }
+    .checkout-container{
+      width: 100%;
+        margin-top: 7rem;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .card-box{
+            height: 300px;
+            margin-bottom: 1rem;
+            
+    
+            .card-icon{
+                width: 90%;
+                height: 200px;
+                background: linear-gradient(90deg, rgba(251,8,140,1) 30%, rgba(251,130,196,1) 100%);
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .card-number{
+                  color: white;
+                  font-size: $h3-size-mobile;
+                }
+                .card-name{
+                  margin-top: 1rem;
+                  color: white;
+                  font-size: $h3-size-mobile;
+                }
+                .card-details{
+                  margin-top: 1rem;
+                  width: 50%;
+                  display: flex;
+                  justify-content: space-between;
+                  .card-date{
+                    color: white;
+                  font-size: $h3-size-mobile;
+                  }
+                  .card-cvc{
+                    color: white;
+                  font-size: $h3-size-mobile;
+                  }
+                }
+            }
+        }
+    
+        .total-price{
+            height: 45px;
+            width: 90%;
+            border: 1px solid $main-color;
+            background-color: white;
+            border-radius: 0.4rem;
+            margin-bottom: 2rem;
+            h3{
+                margin-top: 0.4rem;
+                font-size: $h3-size-mobile;
+            }
+        }
+
+        .checkout-box{
+            width: 70%;
+            margin: auto;
+           
+            form {
+                width: 100%;
+                height: 370px;
+                display: grid;
+                grid-template-columns: repeat(6, 2fr);
+                grid-template-rows: repeat(10, 1fr);
+                gap: 0.5rem;
+            
+                .label-big {
+                    margin-top: 1rem;
+                    grid-column: span 6;
+                    font-size: $p-size-big-mobile
+                }
+                
+            
+                .big {
+                    @include form-style-mobile;
+                    grid-column: span 6;
+                }
+                .label-small {
+                    margin-top: 1rem;
+                    grid-column: span 2;
+                    font-size: $p-size-big-mobile
+                }
+            
+                .small {
+                    @include form-style-mobile;
+                    grid-column: span 2; 
+                }
+            
+                button {
+                    margin-top: 1rem;
+                    @include btn-cart-mobile;
+                    grid-column: span 6;
+                }
+            }
+            
+        }
+        &.hidden {
+            display: none;
+          }
+    }
+    
+}

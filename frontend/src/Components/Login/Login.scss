@@ -1,0 +1,175 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixings";
+
+
+
+.login-container{
+  background: url("../../images/WorkoFondo.gif");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+  h2 {
+    font-size: $h2-size-desktop;
+    max-width: 70%;
+    
+  }
+
+    .login-box{
+      padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 70%;
+        width: 30%;
+        background-color: $white-color;
+          form{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          height: 100%;
+            }
+
+            .input-group {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: center;
+              height: 50%;
+              width: 70%;
+          
+                input {
+                  @include form-style-desktop;
+
+                  
+
+                  .input-error {
+                    background-color: $error-color;
+                  }
+                }
+
+                .password-input-container{
+                  position: relative;
+                  width: 100%;
+  
+                  .btn-visible {
+                    position: absolute;
+                    right: 10px; // Adjust as needed
+                    top: 50%;
+                    transform: translateY(-50%);
+                  }
+                  
+                }
+
+
+          
+                .btn-login {
+                  @include btn-login-desktop
+                }
+            }
+  }
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: $p-size-desktop;
+  padding-bottom: 1rem;
+    a {
+      color: $main-color;
+      font-size: $links-size-desktop;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+}
+
+@media (max-width: 768px) {
+
+  .login-container {
+    background: none;
+    background-color: $menu-color;
+    color: $white-color;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+
+      .login-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 70%;
+        width: 100%;
+        background-color: $menu-color;
+        form{
+          display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+
+          h2 {
+            font-size: $h2-size-mobile;
+            font-weight: $hs-weight;
+            text-align: center;
+            color: $white-color;
+            max-width: 50%;
+          }
+
+          .input-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 50%;
+            width: 90%;
+        
+              input {
+                @include form-style-mobile
+              }
+              .password-input-container{
+                position: relative;
+                width: 100%;
+
+                .btn-visible {
+                  position: absolute;
+                  right: 10px; // Adjust as needed
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+                
+              }
+
+        
+              .btn-login {
+                @include btn-login-mobile
+              }
+          }
+
+        }
+          
+          
+          
+          .register-link {
+            text-align: center;
+            font-size: $p-size-mobile;
+            margin-top: 20px;
+              a {
+                color: $main-color;
+                font-size: $links-size-mobile;
+              }
+              a:hover {
+                text-decoration: underline;
+              }
+          }
+      }
+    }
+  }
+
+
+

@@ -1,0 +1,337 @@
+@import './_variables';
+
+/* Botones */
+
+@mixin btn-login-mobile{
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: $btn-size-mobile-l;
+    cursor: pointer;
+    border-radius: $box-radious-mobile-l;
+    font-size: $links-sm-size-mobile;
+    font-weight: $hs-weight;
+    
+              
+    &:hover {
+    background-color: darken($main-color, 10%);
+    }
+
+    &:disabled{
+        background-color: $secondary-color;
+    }
+    
+}
+@mixin btn-login-desktop{
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: $btn-size-desktop-l;
+    cursor: pointer;
+    border-radius: $box-radious-mobile-l;
+    font-size: $links-sm-size-desktop;
+    font-weight: $hs-weight;
+    
+              
+    &:hover {
+    background-color: darken($main-color, 10%);
+    }
+    &:disabled{
+        background-color: $secondary-color;
+    }
+}
+
+@mixin btn-cart-sm-mobile{
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: $btn-size-mobile-s;
+    cursor: pointer;
+    border-radius: $box-radious-mobile-xs;
+    font-size: $links-sm-size-mobile;
+    font-weight: $hs-weight;
+    
+              
+    &:hover {
+    background-color: darken($main-color, 10%);
+    }
+}
+@mixin btn-cart-sm-desktop{
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: $btn-size-desktop-s;
+    cursor: pointer;
+    border-radius: $box-radious-mobile-xs;
+    font-size: $links-sm-size-mobile;
+    font-weight: $hs-weight;
+    
+              
+    &:hover {
+    background-color: darken($main-color, 10%);
+    }
+}
+
+@mixin btn-cart-mobile{
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: $btn-size-mobile-xl;
+    cursor: pointer;
+    border-radius: $box-radious-mobile-xs;
+    font-size: $links-sm-size-mobile;
+    font-weight: $hs-weight;
+    
+              
+    &:hover {
+    background-color: darken($main-color, 10%);
+    }
+}
+@mixin btn-cart-desktop{
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: $btn-size-desktop-xl;
+    cursor: pointer;
+    border-radius: $box-radious-mobile-xs;
+    font-size: $links-sm-size-mobile;
+    font-weight: $hs-weight;
+    
+              
+    &:hover {
+    background-color: darken($main-color, 10%);
+    }
+}
+
+@mixin btn-discount-mobile{
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: $btn-size-mobile-s-v2;
+    cursor: pointer;
+    border-radius: $box-radious-mobile-xs;
+    font-size: $links-sm-size-mobile;
+    font-weight: $hs-weight;
+    
+              
+    &:hover {
+    background-color: darken($main-color, 10%);
+    }
+}
+@mixin btn-discount-desktop{
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: $btn-size-desktop-s-v2;
+    cursor: pointer;
+    border-radius: $box-radious-mobile-xs;
+    font-size: $links-sm-size-mobile;
+    font-weight: $hs-weight;
+    
+              
+    &:hover {
+    background-color: darken($main-color, 10%);
+    }
+}
+
+@mixin btn-featured-mobile{
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: $btn-size-mobile-m;
+    cursor: pointer;
+    border-radius: $box-radious-mobile-l;
+    font-size: $links-sm-size-mobile;
+    font-weight: $hs-weight;
+    
+              
+    &:hover {
+    background-color: darken($main-color, 10%);
+    }
+}
+@mixin btn-featured-desktop{
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: $btn-size-desktop-m;
+    cursor: pointer;
+    border-radius: $box-radious-mobile-l;
+    font-size: $links-sm-size-desktop;
+    font-weight: $hs-weight;
+    
+              
+    &:hover {
+    background-color: darken($main-color, 10%);
+    }
+}
+
+
+
+@mixin form-style-mobile{
+    font-size: $links-sm-size-mobile;
+    height: 35px;
+    width: 100%;
+    padding-left: 1rem;
+    border-radius: $box-radious-mobile-l;
+    border: 0.7px solid $border-color;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $main-color;
+        box-shadow: 8px 10px 15px -3px rgba(0,0,0,0.1);
+        
+    }
+
+}
+@mixin form-style-desktop{
+    font-size: $links-sm-size-desktop;
+    height: 45px;
+    width: 100%;
+    padding-left: 1rem;
+    border-radius: $box-radious-mobile-l;
+    border: 0.7px solid $border-color;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $main-color;
+        box-shadow: 8px 10px 15px -3px rgba(0,0,0,0.1);
+        
+    }
+}
+
+@mixin address-style-mobile{
+    font-size: $links-sm-size-mobile;
+    height: 35px;
+    width: 100%;
+    padding-left: 1rem;
+    border-radius: $box-radious-mobile-l;
+    border: 0.7px solid $border-color;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $main-color;
+        box-shadow: 8px 10px 15px -3px rgba(0,0,0,0.1);
+        
+    }
+
+    &:disabled{
+        border: 1px solid $border-color;
+        background-color: $light-text-color;
+    }
+
+}
+@mixin address-style-desktop{
+    font-size: $links-sm-size-desktop;
+    height: 45px;
+    width: 100%;
+    padding-left: 1rem;
+    border-radius: $box-radious-mobile-l;
+    border: 0.7px solid $border-color;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $main-color;
+        box-shadow: 8px 10px 15px -3px rgba(0,0,0,0.1);
+        
+    }
+
+    &:disabled{
+        border: 1px solid $border-color;
+        background-color: $light-text-color;
+    }
+}
+
+@mixin input-style-mobile{
+    font-size: $links-sm-size-mobile;
+    height: 35px;
+    width: 30%;
+    padding-left: 0.5rem;
+    border-radius: $box-radious-mobile-l;
+    border: 0.7px solid $border-color;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $main-color;
+        box-shadow: 8px 10px 15px -3px rgba(0,0,0,0.1);
+        
+    }
+
+}
+@mixin input-style-desktop{
+    font-size: $links-sm-size-desktop;
+    height: 35px;
+    width: 20%;
+    padding-left: 0.5rem;
+    border-radius: $box-radious-mobile-l;
+    border: 0.7px solid $border-color;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $main-color;
+        box-shadow: 8px 10px 15px -3px rgba(0,0,0,0.1);
+        
+    }
+
+}
+
+@mixin input-check-style-mobile{
+    &:checked{
+        color: $main-color;
+    }
+}
+
+@mixin pending-style-mobile{
+    color: $caution-color;
+    font-size: $links-sm-size-mobile;
+    padding: 0.3rem 1rem;
+    border-radius: $box-radious-mobile-l;
+    border: 2px solid $caution-color;
+    background-color: $caution-color-back;
+
+}
+@mixin pending-style-desktop{
+    color: $caution-color;
+    font-size: $links-sm-size-mobile;
+    padding: 0.5rem 4rem;
+    border-radius: $box-radious-mobile-l;
+    border: 2px solid $caution-color;
+    background-color: $caution-color-back;
+
+}
+@mixin completed-style-mobile{
+    color: $okey-color;
+    font-size: $links-sm-size-mobile;
+    padding: 0.3rem 1rem;
+    border-radius: $box-radious-mobile-l;
+    border: 2px solid $okey-color;
+    background-color: $okey-color-back;
+
+}
+@mixin completed-style-desktop{
+    color: $okey-color;
+    font-size: $links-sm-size-mobile;
+    padding: 0.5rem 4rem;
+    border-radius: $box-radious-mobile-l;
+    border: 2px solid $okey-color;
+    background-color: $okey-color-back;
+
+}
+@mixin canceled-style-mobile{
+    color: $error-color;
+    font-size: $links-sm-size-mobile;
+    padding: 0.3rem 1rem;
+    border-radius: $box-radious-mobile-l;
+    border: 2px solid $error-color;
+    background-color: $error-color-back;
+
+}
+@mixin canceled-style-desktop{
+    color: $error-color;
+    font-size: $links-sm-size-mobile;
+    padding: 0.5rem 4rem;
+    border-radius: $box-radious-mobile-l;
+    border: 2px solid $error-color;
+    background-color: $error-color-back;
+
+}
+

@@ -1,0 +1,176 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixings";
+
+
+.producto-container {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 800px;
+
+  .producto-header {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    align-self: flex-start;
+
+    h2 {
+      font-size: $h2-size-mobile;
+      font-weight: $hs-weight;
+    }
+
+    p {
+      font-size: $p-size-big-mobile;
+      font-weight: $ps-weight;
+    }
+  }
+
+  .gallery-container {
+    width: 75%;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr; 
+    gap: 0.5rem; 
+    overflow-x: auto;
+  
+    .gallery-item {
+      cursor: pointer;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border: 2px solid transparent;
+        transition: opacity 0.3s ease, border 0.3s ease;
+      }
+  
+      &.selected {
+        width: 96%;
+        grid-column: span 2; 
+        grid-row: span 2;
+      }
+  
+      &:not(.selected) {
+        width: 70%;
+        grid-column: span 1; 
+        grid-row: span 1; 
+      }
+  
+      &:hover {
+        opacity: 0.7;
+        
+      }
+    }
+  }
+
+  .description {
+    max-width: 90%;
+    margin-bottom: 1rem;
+
+    p {
+      font-size: $p-size-mobile;
+      font-weight: $ps-weight;
+    }
+  }
+
+  .input-box {
+    display: flex;
+    margin-bottom: 1rem;
+
+    select {
+      @include form-style-mobile;
+      margin-right: 1rem;
+    }
+
+    input {
+      @include form-style-mobile;
+    }
+  }
+
+  button {
+    @include btn-featured-mobile;
+  }
+}
+@media (max-width: 768px) {
+  .producto-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    .producto-header{
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+        align-self: flex-start;
+      h2{
+        font-size: $h2-size-mobile;
+        font-weight: $hs-weight;
+      }
+      p{
+        font-size: $p-size-big-mobile;
+        font-weight: $ps-weight;
+      }
+      
+    }
+    .gallery-container {
+      width: 90%;
+      margin-bottom: 1rem;
+      display: grid;
+      grid-template-columns: 2fr 2fr; 
+      gap: 0.5rem; 
+      overflow-x: auto;
+    
+      .gallery-item {
+        cursor: pointer;
+    
+        img {
+          width: 100%;
+          height: auto;
+          border: 2px solid transparent;
+          transition: opacity 0.3s ease, border 0.3s ease;
+        }
+    
+        &.selected {
+          width: 100%;
+          grid-column: span 2; 
+          grid-row: span 1;
+        }
+    
+        &:not(.selected) {
+          width: 100%;
+          grid-column: span 1; 
+          grid-row: span 1; 
+        }
+    
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+      .description{
+        max-width: 90%;
+        margin-bottom: 1rem;
+        p{
+          font-size: $p-size-mobile;
+          font-weight: $ps-weight;
+        }
+      }
+
+      .input-box{
+        display: flex;
+        margin-bottom: 1rem;
+
+        select{
+          @include form-style-mobile;
+          margin-right: 1rem;
+        }
+        input{
+          @include form-style-mobile
+        }
+    }
+
+    button{
+      @include btn-featured-mobile
+    }
+  }
+}

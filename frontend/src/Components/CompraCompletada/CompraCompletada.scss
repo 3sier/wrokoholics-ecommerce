@@ -1,0 +1,92 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixings.scss";
+
+.confirmation-page{
+
+  .main-content{
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    .status-indicator{
+      .check-icon{
+        color: $okey-color;
+      }
+      
+
+    }
+    .text-box{
+      width: 40%;
+      margin-bottom: 2rem;
+
+      h2{
+        font-size: $h2-size-desktop;
+        margin-bottom: 2rem;
+      }
+      p{
+        
+        font-size: $p-size-desktop;
+      }
+
+      }
+    .buttons-completed{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      p{
+        margin: 0rem 1rem;
+        font-size: $p-size-desktop;
+      }
+      button{
+        @include btn-featured-mobile
+      }
+
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+
+.confirmation-page{
+
+  .main-content{
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    .status-indicator{
+      .check-icon{
+        color: $okey-color;
+      }
+      
+
+    }
+    .text-box{
+      width: 80%;
+      margin-bottom: 2rem;
+
+      h2{
+        font-size: $h2-size-mobile;
+        margin-bottom: 2rem;
+      }
+      p{
+        
+        font-size: $p-size-mobile;
+      }
+
+      }
+    .buttons-completed{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p{
+        margin: 1rem 0rem;
+        font-size: $p-size-mobile;
+      }
+      button{
+        @include btn-featured-mobile
+      }
+
+    }
+  }
+}
+}
